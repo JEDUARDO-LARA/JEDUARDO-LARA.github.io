@@ -1,0 +1,7 @@
+    --purpura: #59195b;
+    --purpuraOscuro:#440f61;
+    --grisVioleta: #8D89A5;
+    --violeta:#df7cdf;
+    --negro:#000000;
+
+    --blanco: #ffffff;

@@ -1,0 +1,47 @@
+/*4.1.0 open bloque listado cirugias*/
+.listado-cirugias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    
+}
+.listado-cirugias .cirugia {
+    margin: 0 auto;
+    max-width: 28rem;
+      
+}
+.cirugia img{
+ 
+    max-height: 25.7rem;
+    max-width: 100%;
+    object-fit: cover;
+}
+.texto-cirugia {
+    text-align: center;
+    background-color: #037bc0;
+    padding: 1.5rem 0;
+}
+.texto-cirugia h3{
+    margin: 0 auto;
+}
+.cirugia:nth-child(1) {
+    grid-column-start: 1; grid-column-end: 2;
+    
+}
+.cirugia:nth-child(2) {
+    grid-column-start: 2; grid-column-end: 3;
+}
+.cirugia:nth-child(3) {
+    grid-column-start: 3; grid-column-end: 4;
+}
+.cirugia:nth-child(4) {
+    grid-column-start: 1; grid-column-end: 2;
+}
+.cirugia:nth-child(5) {
+    grid-column-start: 2; grid-column-end: 3;
+}
+.cirugia:nth-child(6) {
+    grid-column-start: 3; grid-column-end: 4;
+}
+
+/*4.1.0 end bloque listado cirugias*/

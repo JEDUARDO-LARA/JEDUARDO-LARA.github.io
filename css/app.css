@@ -1,0 +1,484 @@
+/*OPEN CUSTOM PROPERTIES*/
+:root {
+    --purpura: #59195b;
+    --purpuraOscuro:#440f61;
+    --grisVioleta: #8D89A5;
+    --violeta:#df7cdf;
+    --negro:#000000;
+
+    --blanco: #ffffff;
+
+    --fuentePrincipal: 'IBM Plex Serif', serif;
+}
+/*CLOSE CUSTOM PROPERTIES*/
+
+/*open snipet*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px aprox*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/*end snipet*/
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3 {
+    margin: 0 0 5rem 0;
+}
+h2{
+    text-align: center;
+    font-style: italic;
+    font-size: 2.8rem;
+}
+@media (min-width: 768px) { 
+    h2{
+        font-size:3.5rem;
+    }
+}
+p{
+    margin: 0;
+    border: 0px;
+    color: var(--negro);
+    font-size: 2rem;
+}
+
+/*open globales*/
+.container {/*ok*/
+    max-width: 120rem;/*ok*/
+    margin: 0 auto;/*ok*/
+}
+a {/*ok*/
+    text-decoration: none;/*ok*/
+    color: var(--negro);/*ok*/
+}
+img {/*ok*/
+    max-width: 100%;/*ok*/
+    display: block;/*ok*/
+}
+/*end globales*/
+
+/*Open Utilidades*/
+.btn:hover {
+    cursor: pointer;
+}
+/*End Utilidades*/
+
+/*open header y navegacion*/
+header{/*ok*/
+    background-color: var(--grisVioleta);/*ok*/
+}
+.logo{/*ok*/
+    height: 11rem;/*ok*/
+}
+.contenedor-navegacion{/*ok*/
+    border-top:0.1rem solid #e1e1e1; /*width, style, color*/
+}
+.nav-principal {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .nav-principal {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+/*open slider*/
+.hero{
+    background-image: url(../img/principal.png);
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+@media (min-width: 768px) { 
+    .hero{
+        height:65rem;
+    }
+}
+/*end slider*/
+
+/*end header y navegacion*/
+
+/*open Bloque Nosotros*/
+.sobre-nosotros {
+    background-image:linear-gradient(to bottom, transparent 50%,#8d89a5fd 60%,#8D89A5 100%),url(../img/nosotros.webp);
+    background-position: center,top center;
+    height: 45rem;
+    margin-top: 3rem;
+    padding-bottom: 70rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 70rem;
+}
+@media (min-width: 768px) { 
+    .sobre-nosotros {
+        background-image:linear-gradient(to right, transparent 50%,#8d89a5fd 60%,#8D89A5 100%),url(../img/nosotros.webp);
+        background-position: center left;
+        padding:  25rem 0;
+        margin-top: 3rem;
+        background-repeat: no-repeat;
+        background-size: 100%, 160rem;
+        height: 70rem;
+    }
+}
+.sobre-nosotros-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+@media (min-width: 768px) { 
+    .sobre-nosotros-grid {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap:  25%;
+    }
+}
+.texto-nosotros {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2 / 3;
+}
+
+@media (min-width: 768px) { 
+    .texto-nosotros {
+        grid-column: 2 / 3;
+    }  
+}
+.texto-nosotros p {
+    margin: 2rem 0 0 0;
+    padding: 0 5% 0 5%;
+    text-align: justify;
+}
+.texto-nosotros h2 {
+    margin: 3rem 0 0 0;
+}
+@media (min-width: 768px) { 
+    .texto-nosotros h2 {
+        margin: 0;
+    }
+}
+/*end Bloque Nosotros*/
+
+/*open bloque Categorias Cirugias*/
+.categorias { 
+    padding-top: 5rem;
+    background-image: linear-gradient(to top,rgba(120,114,155,0.5) 20%,#f0f0f0 70%, transparent 100%); 
+}
+.categorias-cirugias {
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+} 
+@media (min-width: 768px) { 
+    .categorias-cirugias {
+        padding: 0 0 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    } 
+}
+.categoria {
+    padding-bottom: 5rem;
+}
+.categoria:last-of-type{
+    padding-bottom: 0;
+}
+.categoria a {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.categoria .texto-categoria {
+    padding: 2rem 0;
+    transition: background-color 0.3s ease-out;
+    border-radius: 0 0 2rem 2rem;
+    color: var(--purpura);
+}
+.categoria .texto-categoria:hover {
+    opacity: 0.3;
+    background-color: var(--purpura);
+    color: var(--blanco);
+}
+/*Open bloque "Contacto" (Categorias Cirugias)*/
+.contacto-grid {
+    margin-bottom: 5rem;
+}
+@media (min-width: 768px) { 
+    .contacto-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin: 5rem auto;
+    }
+}
+.contacto-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem 4rem 2rem;
+}
+@media (min-width: 768px) { 
+    .contacto-texto {
+        padding: 0;
+    }
+}
+.contacto-texto p {
+    color: var(--purpura);
+    font-weight: 900;
+    text-align: justify;
+}
+.formulario { /*apariencia de formulario*/
+    background-color: var(--purpura);
+    border-radius: 3rem;
+    opacity: 0.85;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0 3rem 0;
+    margin: 0 5rem;
+}
+
+@media (min-width: 768px) { 
+    .form-contenido{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-contenido .campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto 0.5rem;
+        column-gap: 2rem;
+    }
+}
+.form-contenido .btn{ 
+    padding: 1.5rem 0;
+    border: none;
+    border-radius: 1rem;
+    width: 98%;
+    background-color: var(--violeta);
+    color: var(--purpuraOscuro);
+    
+}
+.campo{
+    margin-bottom: 5rem;
+}
+
+.campo label {
+    width: 8rem;
+    color: var(--blanco); 
+    display: block;
+    padding-bottom: 0.5rem;
+}
+.campo input[type="text"],
+.campo select[id="cirugia"]{
+    width: 25rem;
+    height: 3.7rem;
+    border: 1px solid #e1e1e1;
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+    border-radius: 0.5rem;
+}
+/*end bloque "Contacto" (Categorias Cirugias)*/
+
+/*end bloque Categorias Cirugias*/
+.listado-cirugias .cirugia {
+    margin: 0 auto;
+    width: 100%;
+}
+.cirugia {
+    display: block;
+    padding-bottom: 4rem;
+}
+@media (min-width: 768px) { 
+    .cirugia {
+        padding-bottom: 0;
+    }
+}
+.cirugia img{
+    width: 100%;
+}
+@media (min-width: 768px) { 
+    /*4.0.0 open contenido principal*/
+    .contenido-principal,
+    .faciales{
+        padding-top: 5rem;
+    }
+/*4.1.0 open bloque listado cirugias*/
+    .listado-cirugias {
+        display: grid;
+        grid: repeat(2, 1fr)/repeat(3, 1fr);
+        gap: 5rem;
+    }
+    .listado-cirugias .cirugia {
+        margin: 0 auto;
+        max-width: 28rem;
+    }
+    .cirugia img{
+     
+        max-height: 25.7rem;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+.texto-cirugia {
+    text-align: center;
+    background-color: var(--grisVioleta);
+    opacity: 0.7;
+    padding: 1.5rem 0;
+    transition: background-color 0.3s ease-out;
+    border-radius: 0 0 2rem 2rem;
+}
+.texto-cirugia:hover {
+    background-color: rgba(120, 114, 155);
+    opacity: 0.3;
+}
+
+.texto-cirugia h3{
+    margin: 0 auto;
+    color: var(--purpuraOscuro);
+}
+/*4.1.0 end bloque listado cirugias*/
+
+/*4.0.0 end contenido principal*/
+
+/*6.0.0 open footer*/
+.site-footer {
+    border-top: 0.1rem solid #e1e1e1;
+    background-color: rgba(89, 25, 91, 0.7);
+    margin-top: 5rem;
+    padding: 2rem 0;
+}
+
+@media (min-width: 768px) { 
+    .grid-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7rem;
+    } 
+}
+.containers-footer:nth-child(1) {
+    padding: 5rem 0;
+}
+@media (min-width: 768px) { 
+    .containers-footer:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 5rem 5rem 5rem 0;
+    }  
+}
+.containers-footer:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30%;
+}
+@media (min-width: 768px) { 
+    .containers-footer:nth-child(2) {
+        padding-left: 5rem;
+    }
+}
+.containers-footer h3 {
+    margin-bottom: 2rem;
+    color: #e1e1e1;
+   
+}
+@media (min-width: 768px) { 
+    .containers-footer h3 {
+        text-align: start;
+    }
+}
+.footer-menu{
+    display: flex;
+    flex-direction: column;
+}
+.footer-menu-opciones {
+    margin: 1rem 0;
+    height: 3rem;
+    display: flex;
+    text-align: center;
+}
+.footer-menu-opciones img{
+width: 3rem;
+margin-right: 0.7rem;
+}
+.footer-menu-opciones a{
+    color:#e1e1e1;
+
+    display: block;
+    margin: auto 0 auto 0;
+}
+.copyright {
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+}
+/*6.0.0 end footer*/
+
+
+
+/*START PAGINA CONTACTO*/
+
+.contactanos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/contacto/pexels-tima-miroshnichenko-8376309.jpg);
+    height:60rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+@media (min-width: 768px) { 
+    .contactanos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        height:60rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+.contactanos .formulario {
+    width: 90%;
+    height: 90%;
+    opacity: 0.65;
+    padding: 0;
+}
+@media (min-width: 768px) { 
+    .contactanos .formulario {
+        grid-column: 2 / 3;
+        max-height: 80%;
+    }
+}
+
+/*END PAGINA CONTACTO*/
+
+/*
+    .sobre-nosotros {
+        background-image:linear-gradient(to right, transparent 50%,#8d89a5fd 60%,#8D89A5 100%),url(../img/nosotros.webp);
+        background-position: center left;
+        padding:  25rem 0;
+        margin-top: 3rem;
+        background-repeat: no-repeat;
+        background-size: 100%, 160rem;
+        height: 70rem;
+    }
+*/
+
+
+
+
+
+
